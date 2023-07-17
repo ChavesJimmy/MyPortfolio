@@ -1,0 +1,31 @@
+:root{
+    --primary:#CDD1C4;
+    --secondary:#5C80BC;
+    --third:#4D5061;
+    --fourth:#30323D;
+    --last:#E8C547;
+}
+*{
+    font-family: 'VT323', sans-serif;
+    color: var(--last);
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--fourth);
+}
+h1.title,
+h2.title{
+    font-weight: 900;
+    color: var(--primary);
+    font-size: 30px;
+
+    strong{
+        color: var(--third);
+        font-size: 30px;
+        text-shadow: none;
+
+    }
+}

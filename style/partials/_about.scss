@@ -1,0 +1,34 @@
+#hero{
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 5px;
+.Name{
+        font-family: 'VT323', monospace;
+        font-weight: 400;
+        font-size: 40px;
+        margin-top: -10px;
+        }
+.endName,.hello{
+    font-family: 'VT323', monospace;
+    font-weight: 300;
+    font-size: 30px;
+        }
+
+.hello{
+    font-size: 30px;
+    text-align: center;
+    margin-top:0 ;
+    color: var(--primary);
+
+}
+}
+#about{
+    border-top: solid;
+    border-left: solid;
+    width: 95%;
+}

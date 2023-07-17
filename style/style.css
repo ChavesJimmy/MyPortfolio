@@ -1,0 +1,90 @@
+:root {
+  --primary:#CDD1C4;
+  --secondary:#5C80BC;
+  --third:#4D5061;
+  --fourth:#30323D;
+  --last:#E8C547;
+}
+
+* {
+  font-family: "VT323", sans-serif;
+  color: var(--last);
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fourth);
+}
+
+h1.title,
+h2.title {
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 30px;
+}
+h1.title strong,
+h2.title strong {
+  color: var(--third);
+  font-size: 30px;
+  text-shadow: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  border-bottom: solid;
+  width: 90%;
+  margin: auto;
+}
+.navbar .nav-link, .navbar a {
+  color: var(--last);
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "VT323", monospace;
+}
+.navbar .navbar-brand {
+  font-family: "VT323", monospace;
+  font-size: 40px;
+  font-weight: 300;
+}
+.navbar .nav-link:hover {
+  color: var(--fourth);
+  text-shadow: 0 0 5px var(--last);
+}
+
+#hero {
+  font-family: "VT323", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+#hero .Name {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: -10px;
+}
+#hero .endName, #hero .hello {
+  font-family: "VT323", monospace;
+  font-weight: 300;
+  font-size: 30px;
+}
+#hero .hello {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+  color: var(--primary);
+}
+
+#about {
+  border-top: solid;
+  border-left: solid;
+  width: 95%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+.navbar{
+    position: sticky;
+    top:0;
+    border-bottom: solid;
+    width: 90%;
+    margin: auto;
+    
+
+.nav-link,a{
+    color: var(--last);
+    font-weight: 900;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+
+}
+.navbar-brand{
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    font-weight: 300;
+}
+.nav-link:hover{
+    color: var(--fourth);
+    text-shadow: 0 0 5px var(--last);
+}
+
+}
+
