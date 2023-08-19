@@ -1,0 +1,214 @@
+#portfolio{
+    margin: auto;
+    /* Center website */
+  h1{
+    text-align: start !important;
+  }
+  #myBtnContainer,.WhereToClick{
+    text-align: center;
+  }
+  .row {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 15px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    color: black;
+    margin: auto;
+    width: 350px;
+    display: none; /* Hide all elements by default */
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: var(--primary);
+    margin: auto;
+    margin-top: 2rem;
+    height: 200px;
+    position: relative;
+    img{
+        filter: grayscale(0.5);
+        object-fit: cover;
+      max-height: 200px;
+      overflow: hidden;
+      }
+
+    .overlay, .title{
+        background-color: var(--last);
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .title{
+        top: -2rem;
+        right: 0%;
+        width: 100%;
+        height: 2rem;
+        padding-top: 0.4rem ;
+        border-bottom: solid 1px var(--third);
+
+    }
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btns {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    margin-bottom: 0.2rem;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .btns:hover {
+    background-color: var(--third);
+    color: var(--fourth);
+  }
+  
+  .btns.active {
+    background-color: var(--fourth);
+    color: var(--secondary);
+  }
+}
+
+
+/* The Modal (background) */
+.modal, .modal2,.modal3, .modal4,.modal5,.modal6,.modalBakery,.modalFS,.modalphoto {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  border: solid;
+  top: 87px;
+  color: var(--fourth);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow:auto; /* Enable scroll if needed */
+  background-color: transparentize($color: #0B162C, $amount: 0.05); /* Black w/ opacity */
+  .flexImg{
+    display:flex; 
+    flex-wrap:wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    img{
+      width: 250px;
+      object-fit: contain;
+      transition: 1s;
+    }
+
+    .bottom{
+      margin-bottom: 15rem;
+    }
+
+  }  
+  p{
+      border:solid ;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      font-weight: bold;
+    }
+    .projectLinks{
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 3rem;
+      margin-top: 0;
+      a{
+        border: solid 2px;
+        color: var(--fourth) ;
+        text-decoration: none;
+        padding: 0.5rem;
+        transition: 1s;
+      }
+      a:hover{
+        background-color: var(--fourth);
+        color: var(--secondary);
+        font-weight: bold;
+      }
+      button{
+        border: solid 3px gray;
+        color: whitesmoke;
+        text-decoration: line-through;
+      }
+    }
+}
+
+
+/* Caption of Modal Image */
+#caption, #caption2 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption, #caption2 {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close,.close2 ,.close3,.close4,.close5,.close6,.closephoto,.closeFS,.closeBakery {
+  position: fixed;
+  top: 87px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,.close2:hover,.close3:hover,.close4:hover,.close5:hover,.close6:hover,.closephoto:hover,.closeFS:hover,.closeBakery:hover,
+.close:focus, .close2:focus,.close3:focus,.close4:focus,.close5:focus,.close6:focus,.closephoto:focus,.closeFS:focus,.closeBakery:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

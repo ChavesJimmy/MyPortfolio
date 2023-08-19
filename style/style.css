@@ -1,90 +1,329 @@
 :root {
-  --primary:#CDD1C4;
-  --secondary:#5C80BC;
-  --third:#4D5061;
-  --fourth:#30323D;
-  --last:#E8C547;
+  --primary:#0B162C;
+  --secondary:#1C2942;
+  --third:#3B556D;
+  --fourth:#5FC2BA;
+  --last:#FFFFFF;
 }
 
-* {
-  font-family: "VT323", sans-serif;
-  color: var(--last);
+body {
+  background-color: var(--last);
+  font-family: "Roboto";
+  color: var(--third);
   font-weight: 300;
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: var(--fourth);
+section {
+  padding: 20px 60px;
 }
 
-h1.title,
-h2.title {
-  font-weight: 900;
-  color: var(--primary);
-  font-size: 30px;
+.bg-darkgrey {
+  background-color: var(--secondary);
 }
-h1.title strong,
-h2.title strong {
+
+h2.Mytitle {
+  font-weight: 900;
+  color: var(--last);
+}
+h2.Mytitle strong {
+  color: var(--fourth);
+  text-shadow: none;
+}
+
+h2.Mytitle2 {
+  font-weight: 900;
   color: var(--third);
-  font-size: 30px;
+}
+h2.Mytitle2 strong {
+  color: var(--fourth);
   text-shadow: none;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  border-bottom: solid;
-  width: 90%;
+  border-bottom: solid var(--third);
+  width: 100%;
   margin: auto;
+  background-color: var(--last);
+  z-index: 20;
+  box-shadow: 0px 10px 15px -15px var(--last);
 }
 .navbar .nav-link, .navbar a {
-  color: var(--last);
+  color: var(--third);
   font-weight: 900;
-  font-size: 20px;
-  font-family: "VT323", monospace;
+  font-size: 16px;
 }
 .navbar .navbar-brand {
-  font-family: "VT323", monospace;
   font-size: 40px;
   font-weight: 300;
+  color: var(--fourth);
+}
+.navbar .navbar-toggler {
+  background-color: var(--fourth);
+  border: var(--secondary) solid !important;
 }
 .navbar .nav-link:hover {
   color: var(--fourth);
   text-shadow: 0 0 5px var(--last);
 }
 
+#languages {
+  text-align: end;
+  position: fixed;
+  top: 87px;
+  right: 2px;
+  padding: 0 5px;
+  background-color: var(--last);
+}
+#languages a {
+  text-decoration: none;
+  color: var(--third);
+  font-size: 15px;
+}
+#languages a:hover {
+  color: var(--fourth);
+}
+#languages a.active {
+  color: var(--fourth);
+}
+
 #hero {
-  font-family: "VT323", monospace;
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: auto;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-#hero .Name {
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-size: 40px;
-  margin-top: -10px;
-}
-#hero .endName, #hero .hello {
-  font-family: "VT323", monospace;
-  font-weight: 300;
-  font-size: 30px;
-}
-#hero .hello {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 0;
-  color: var(--primary);
+  align-items: center;
+  height: 200px;
 }
 
 #about {
-  border-top: solid;
-  border-left: solid;
-  width: 95%;
+  color: var(--fourth);
+}
+
+#portfolio {
+  margin: auto;
+  /* Center website */
+  /* Add padding BETWEEN each column */
+  /* Create three equal columns that floats next to each other */
+  /* Clear floats after rows */
+  /* Content */
+  /* The "show" class is added to the filtered elements */
+  /* Style the buttons */
+}
+#portfolio h1 {
+  text-align: start !important;
+}
+#portfolio #myBtnContainer, #portfolio .WhereToClick {
+  text-align: center;
+}
+#portfolio .row {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+#portfolio .row,
+#portfolio .row > .column {
+  padding: 15px;
+}
+#portfolio .column {
+  color: black;
+  margin: auto;
+  width: 350px;
+  display: none; /* Hide all elements by default */
+}
+#portfolio .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#portfolio .content {
+  background-color: var(--primary);
+  margin: auto;
+  margin-top: 2rem;
+  height: 200px;
+  position: relative;
+}
+#portfolio .content img {
+  filter: grayscale(0.5);
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 200px;
+  overflow: hidden;
+}
+#portfolio .content .overlay, #portfolio .content .title {
+  background-color: var(--last);
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+#portfolio .content .title {
+  top: -2rem;
+  right: 0%;
+  width: 100%;
+  height: 2rem;
+  padding-top: 0.4rem;
+  border-bottom: solid 1px var(--third);
+}
+#portfolio .show {
+  display: block;
+}
+#portfolio .btns {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  margin-bottom: 0.2rem;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#portfolio .btns:hover {
+  background-color: var(--third);
+  color: var(--fourth);
+}
+#portfolio .btns.active {
+  background-color: var(--fourth);
+  color: var(--secondary);
+}
+
+/* The Modal (background) */
+.modal, .modal2, .modal3, .modal4, .modal5, .modal6, .modalBakery, .modalFS, .modalphoto {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  border: solid;
+  top: 87px;
+  color: var(--fourth);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(11, 22, 44, 0.95); /* Black w/ opacity */
+}
+.modal .flexImg, .modal2 .flexImg, .modal3 .flexImg, .modal4 .flexImg, .modal5 .flexImg, .modal6 .flexImg, .modalBakery .flexImg, .modalFS .flexImg, .modalphoto .flexImg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.modal .flexImg img, .modal2 .flexImg img, .modal3 .flexImg img, .modal4 .flexImg img, .modal5 .flexImg img, .modal6 .flexImg img, .modalBakery .flexImg img, .modalFS .flexImg img, .modalphoto .flexImg img {
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 1s;
+}
+.modal .flexImg .bottom, .modal2 .flexImg .bottom, .modal3 .flexImg .bottom, .modal4 .flexImg .bottom, .modal5 .flexImg .bottom, .modal6 .flexImg .bottom, .modalBakery .flexImg .bottom, .modalFS .flexImg .bottom, .modalphoto .flexImg .bottom {
+  margin-bottom: 15rem;
+}
+.modal p, .modal2 p, .modal3 p, .modal4 p, .modal5 p, .modal6 p, .modalBakery p, .modalFS p, .modalphoto p {
+  border: solid;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+.modal .projectLinks, .modal2 .projectLinks, .modal3 .projectLinks, .modal4 .projectLinks, .modal5 .projectLinks, .modal6 .projectLinks, .modalBakery .projectLinks, .modalFS .projectLinks, .modalphoto .projectLinks {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+.modal .projectLinks a, .modal2 .projectLinks a, .modal3 .projectLinks a, .modal4 .projectLinks a, .modal5 .projectLinks a, .modal6 .projectLinks a, .modalBakery .projectLinks a, .modalFS .projectLinks a, .modalphoto .projectLinks a {
+  border: solid 2px;
+  color: var(--fourth);
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: 1s;
+}
+.modal .projectLinks a:hover, .modal2 .projectLinks a:hover, .modal3 .projectLinks a:hover, .modal4 .projectLinks a:hover, .modal5 .projectLinks a:hover, .modal6 .projectLinks a:hover, .modalBakery .projectLinks a:hover, .modalFS .projectLinks a:hover, .modalphoto .projectLinks a:hover {
+  background-color: var(--fourth);
+  color: var(--secondary);
+  font-weight: bold;
+}
+.modal .projectLinks button, .modal2 .projectLinks button, .modal3 .projectLinks button, .modal4 .projectLinks button, .modal5 .projectLinks button, .modal6 .projectLinks button, .modalBakery .projectLinks button, .modalFS .projectLinks button, .modalphoto .projectLinks button {
+  border: solid 3px gray;
+  color: whitesmoke;
+  text-decoration: line-through;
+}
+
+/* Caption of Modal Image */
+#caption, #caption2 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption, #caption2 {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* The Close Button */
+.close, .close2, .close3, .close4, .close5, .close6, .closephoto, .closeFS, .closeBakery {
+  position: fixed;
+  top: 87px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .closephoto:hover, .closeFS:hover, .closeBakery:hover,
+.close:focus, .close2:focus, .close3:focus, .close4:focus, .close5:focus, .close6:focus, .closephoto:focus, .closeFS:focus, .closeBakery:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+#skills .skillContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+#skills .skillBg {
+  background-color: var(--secondary);
+  width: 100%;
+  padding: 0;
+  margin-top: 1rem;
+  border-radius: 10px;
+  height: 27px;
+  margin: 10px;
+}
+#skills .skillPrct {
+  background-color: var(--fourth);
+  color: var(--secondary);
+  position: relative;
+  text-align: start;
+  padding: 1px 0 5px 50px;
+  height: 23px;
+  top: 2px;
+  left: 2px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 1px 0 5px 0 var(--fourth);
 }/*# sourceMappingURL=style.css.map */

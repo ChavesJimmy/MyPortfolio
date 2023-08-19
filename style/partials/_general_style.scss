@@ -1,30 +1,42 @@
 :root{
-    --primary:#CDD1C4;
-    --secondary:#5C80BC;
-    --third:#4D5061;
-    --fourth:#30323D;
-    --last:#E8C547;
+    --primary:#0B162C;
+    --secondary:#1C2942;
+    --third:#3B556D;
+    --fourth:#5FC2BA;
+    --last:#FFFFFF;
 }
-*{
-    font-family: 'VT323', sans-serif;
-    color: var(--last);
+
+body{
+    background-color: var(--last);
+    font-family: 'Roboto';
+    color: var(--third);
     font-weight: 300;
     font-size: 15px;
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: var(--fourth);
+section{
+    padding: 20px 60px;
 }
-h1.title,
-h2.title{
-    font-weight: 900;
-    color: var(--primary);
-    font-size: 30px;
+.bg-darkgrey{
+    background-color: var(--secondary);
 
+}
+//title styles
+h2.Mytitle{
+    font-weight: 900;
+    color: var(--last);
     strong{
-        color: var(--third);
-        font-size: 30px;
+        color: var(--fourth);
+        text-shadow: none;
+
+    }
+}
+h2.Mytitle2{
+    font-weight: 900;
+    color: var(--third);
+    strong{
+        color: var(--fourth);
         text-shadow: none;
 
     }

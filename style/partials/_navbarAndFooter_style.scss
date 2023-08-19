@@ -1,22 +1,29 @@
 .navbar{
     position: sticky;
     top:0;
-    border-bottom: solid;
-    width: 90%;
+    border-bottom: solid var(--third);
+    width: 100%;
     margin: auto;
+    background-color: var(--last);
+    z-index: 20;
+    box-shadow: 0px 10px 15px -15px var(--last);
     
 
 .nav-link,a{
-    color: var(--last);
+    color: var(--third);
     font-weight: 900;
-    font-size: 20px;
-    font-family: 'VT323', monospace;
+    font-size: 16px;
 
 }
 .navbar-brand{
-    font-family: 'VT323', monospace;
     font-size: 40px;
     font-weight: 300;
+    color: var(--fourth);
+    
+}
+.navbar-toggler{
+    background-color: var(--fourth);
+    border: var(--secondary) solid !important;
 }
 .nav-link:hover{
     color: var(--fourth);
@@ -24,4 +31,22 @@
 }
 
 }
-
+#languages{
+    text-align: end;
+    position: fixed;
+    top: 87px;
+    right: 2px;
+    padding: 0 5px;
+    background-color: var(--last);
+    a{
+        text-decoration: none;
+        color: var(--third);
+        font-size: 15px;
+    }
+    a:hover{
+        color: var(--fourth);
+    }
+    a.active{
+        color: var(--fourth);
+    }
+}

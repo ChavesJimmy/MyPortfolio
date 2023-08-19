@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+    ">
+    <!--Custom Style SCSS-->
+    <link rel="stylesheet" href="./style/style.css">
+    <!--Libraries Style-->
+    <link rel="stylesheet" href="./style/libraries/animate.css">
+    <!--Font icons-->
+    <script src="https://kit.fontawesome.com/f1be7bdbda.js" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">  </head>
+<body>
+  <!--navbar start-->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-xl">
+              <a class="navbar-brand" href="#">JC-Portfolio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">À propos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Compétences</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div id="languages">
+            <a href="./index.html">EN</a>
+            <a href="./indexFR.html" class="active">/FR</a>
+            <a href="./indexDE.html">/DE</a>
+        </div>
+  <!--navbar end-->
+  <!--hero start-->
+  <div id="hero">
+    <h1>Salut! Je suis <b class="myHeroText"></b></h1>
+  </div>
+  <!--hero end-->
+  <!--about start-->
+  <div id="about" class="bg-darkgrey">
+    <section>
+    <h2 class="Mytitle">About <strong>me</strong></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eveniet et ratione, ut omnis odit asperiores, magnam architecto cum inventore numquam ex nostrum ad voluptatum officia beatae velit? Odio voluptatibus blanditiis reprehenderit impedit natus aperiam magnam, nam soluta, repellendus molestias sequi minima cum ducimus explicabo distinctio ea dolores dicta obcaecati excepturi, delectus voluptates sed. Illum explicabo ipsum exercitationem. Similique omnis facere nostrum maiores velit vitae voluptates totam reprehenderit deleniti earum.</p>
+  </section>
+</div>
+  <!--about end-->
+  <!--skills start-->
+  <div id="skills">
+    <section>
+    <h2 class="Mytitle2"><strong>My</strong> Skills</h2>
+  </section>
+  </div>
+  <!--skills end-->  
+  <!--portfolio start-->
+    <div id="portfolio" class="bg-darkgrey">
+      <section>
+      <h2 class="Mytitle">My <strong>Portfolio</strong></h2>
+      <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('frontend')"> Frontend</button>
+          <button class="btn" onclick="filterSelection('backend')"> Backend</button>
+          <button class="btn" onclick="filterSelection('fullstack')"> Fullstack</button>
+        </div>
+        <div class="WhereToClick">Click on the image to see project details.</div>
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+      <div class="column frontend">
+          <div class="content">
+              <img src="./images/CR1.png" style="width:100%" id="myImg">
+              <h4 class="overlay title">Food Blog</h4>
+          </div>
+          <!-- The Modal CR1 -->
+          <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <div class="flexImg">
+                  <img class="modal-content" src="images/CR1-2.png">
+                  <img  class="modal-content" src="images/CR1-4.png">
+              </div>
+              <p>Thema : Food Blog <br><br>
+  
+                  Technologies : CSS3 / SCSS / HTML5 <br><br>
+                  Task : Build a responsive website, with contact page(linked to Code Factory Website), about page, and a special recept of the month 
+                  <br> <br>
+                  Time allowed for the project: 2 days</p>
+                  <div class="projectLinks"><a href="CR2">Visit Website</a>
+                  <a href="https://github.com/ChavesJimmy/FE17-CR2-ChavesJimmy.git">See Git Repository</a></div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content" src="images/CR1.png">
+                      <img  class="modal-content" src="images/CR1-3.png">
+                  </div>
+              <div id="caption"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column frontend">
+          <div class="content">
+              <img src="./images/CR2-1.png" id="myImg2" style="width:100%">
+              <h4 class="overlay title">Week Planner</h4>
+      
+          </div>
+          <!-- The Modal CR2 -->
+          <div id="myModal2" class="modal2">
+              <span class="close2">&times;</span>
+              <div class="flexImg" >
+                  <img class="modal-content" src="images/CR2.png">
+                  <img class="modal-content" src="images/CR2-3.png">
+              </div>
+              <p><b>Thema : Week planner</b><br><br>
+  
+                  Technologies : CSS3 / HTML5 / Bootstrap / Javascript / JSON <br><br>
+                  Task : Build a responsive webpage, with possibility to increase decrease the priority of the task, color of the priority should change according to the importance, and possibility to sort the tasks by importance. <br><br>
+                  Time allowed for the project: 2 days</p>
+                  <div class="projectLinks"><a href="CR2">Visit Website</a>
+                      <a href="https://github.com/ChavesJimmy/FE17-CR2-ChavesJimmy.git">see Git Repository</a>
+                 </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content" src="images/CR2-4.png">
+                      <img  class="modal-content" src="images/CR2-1.png">
+                  </div>
+              <div id="caption2"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column frontend">
+          <div class="content">
+              <img src="./images/CR3.png" style="width:100%" id="myImg3">
+              <h4 class="overlay title">Restaurant Website</h4>
+      
+          </div>
+          <!-- The Modal CR3 -->
+          <div id="myModal3" class="modal3">
+              <span class="close3">&times;</span>
+              <div class="flexImg" >
+                  <img  class="modal-content" src="images/CR3.png">
+                  <img  class="modal-content" src="images/CR3-2.png">
+              </div>
+              <p><b>Thema : Restaurant website</b> <br><br>
+                  Technologies : CSS3 / HTML5 / Bootstrap / Angular / Typescript <br><br>
+                  Task : Build a responsive website, with possibility to add products in a shopping cart, create reactive formular to confirm the order or book a table, possibility to see the details of a product, impossibility to add in the cart if the product is not available. 
+                  Also the price is calculated with an automatic 10% fee for service and if the total price is superior to 50Eur it will automatically apply a 15% discount. <br> <br>
+                  Time allowed for the project: 2 days</p>
+                  <div class="projectLinks">
+                      <a href="cr3-jimmy">Visit Website</a>
+                      <a href="https://github.com/ChavesJimmy/FE17-CR3-ChavesJimmy.git">See Git Repository</a></div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content  bottom" src="images/CR3-4.png">
+                      <img  class="modal-content  bottom" src="images/CR3-5.png">
+                  </div>
+              <div id="caption3"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column frontend">
+          <div class="content">
+              <img src="./images/FE.png" style="width:100%" id="myImgphoto">
+              <h4 class="overlay title">Photographer Website</h4>
+      
+          </div>
+          <!-- The Modal CR3 -->
+          <div id="myModalphoto" class="modalphoto">
+              <span class="closephoto">&times;</span>
+              <div class="flexImg" >
+                  <img class="modal-content" src="images/FE.png">
+                  <img class="modal-content" src="images/FE-2.png">
+              </div>
+              <p>
+                  <b>Thema : Photographer's website</b> <br><br>
+                      Technologies : Angular / Typescript / CSS / HTML5 / Bootstrap / Sweetalert2(library) <br><br>
+                      Task : In a team of 5 people we had to build a responsive website.
+                      We had to organize how to work and split the tasks ourself( we used a KANBAN Method by using a Trello board and we used a drawio file to sketch the website at the beginning so we could all go on the same direction). <br><br>
+                      We had to use reactive formular to the contact page and the testimony page. <br>
+                      We added the "sweetalert2" library to make the alerts prettier.
+                      <br> <br>
+                      Time allowed for the project: 5 days 
+              </p>
+                  <div class="projectLinks"> <a href="photographer-webpage">Visit Website</a>
+                      <a href="https://github.com/ChavesJimmy/TeamProject-Arwa-Katharina-Markus-Christos-Jimmy.git">See Git Repository</a>
+                 </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content bottom" src="images/FE-3.png">
+                      <img  class="modal-content bottom" src="images/FE-4.png">
+                  </div>
+              <div id="captionphoto"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column backend">
+          <div class="content">
+              <img src="./images/CR4-1.png" style="width:100%" id="myImg4">
+              <h4 class="overlay title">My Library</h4>
+          </div>
+          <!-- The Modal CR4 -->
+          <div id="myModal4" class="modal4">
+              <span class="close4">&times;</span>
+              <div class="flexImg" >
+                  <img class="modal-content" src="images/CR4-1.png">
+                  <img class="modal-content" src="images/CR4-2.png">
+              </div>
+              <p>
+                  <b>Thema : My library website</b> <br><br>
+                  Technologies : MySQL / PHP / Bootstrap /CSS5<br><br>
+                  Task : Build a responsive website connected to a database (for this project just a one table database was enough). Possibility to create, update, erase a media. Possibility to see all the item from a same publisher .<br> <br>
+                  Time allowed for the project: 2 days
+              </p>
+                  <div class="projectLinks"><a href="CRUD">Visit Website</a>
+                      <a href="https://github.com/ChavesJimmy/BE17-CR4-Jimmy.git">See Git Repository</a>
+                 </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content bottom" src="images/CR4-3.png">
+                      <img  class="modal-content bottom" src="images/CR4-5.png">
+                  </div>
+              <div id="caption4"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column backend">
+          <div class="content">
+              <img src="./images/CR5-2.png" style="width:100%" id="myImg5">
+              <h4 class="overlay title">Pet adoption Website</h4>
+             
+              </div>
+                     <!-- The Modal CR5 -->
+          <div id="myModal5" class="modal5">
+              <span class="close5">&times;</span>
+              <div class="flexImg">
+                  <img class="modal-content" src="images/CR5-2.png">
+                  <img class="modal-content" src="images/CR5-1.png">
+              </div>
+              <p>
+                  <b>Thema : Pet adoption website</b> <br><br>
+                  Technologies : MySQL / PHP / Bootstrap /SCSS<br><br>
+                  Task : Build a responsive website connected to a database (for this project i used 2 tables). 
+                  Log in system, possibility to connect as user or admin. <br><br>
+                  Admin's side: Possibility to create, update, erase a pet. <br><br>
+                  User's side: Possibility to adopt a pet by going to the detail's page(if the Pet was not already adopted) and possibility to update his profile.
+                  <br> <br>
+                  Time allowed for the project: 2 days 
+              </p>
+                  <div class="projectLinks"><a href="CR5">Visit Website</a>
+                      <a href="https://github.com/ChavesJimmy/BE17_CR5_Jimmy.git">See Git Repository</a>
+               </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content bottom" src="images/CR5-3.png">
+                      <img  class="modal-content bottom" src="images/CR5-4.png">
+                  </div>
+              <div id="caption5"></div>
+          </div>
+          <!--modal end-->
+      </div> 
+      <div class="column backend">
+          <div class="content">
+              <img src="./images/CR6.png" style="width:100%" id="myImg6" >
+              <h4 class="overlay title">Events Website</h4>
+             
+              </div>
+                     <!-- The Modal CR6 -->
+          <div id="myModal6" class="modal6">
+              <span class="close6">&times;</span>
+              <div class="flexImg" >
+                  <img class="modal-content" src="images/CR6.png">
+                  <img class="modal-content" src="images/CR6-2.png">
+              </div>
+              <p>
+                  <b>Thema : Pet adoption website</b> <br><br>
+                  Technologies : MySQL / Symfony /CSS<br><br>
+                  Task : Build a responsive website connected to a database using Symfony command. 
+                  Possibility to use the CRUD and to sort by type of events.
+                  <br> <br>
+                  Time allowed for the project: 2 days 
+              </p>
+                  <div class="projectLinks"><button disabled="disabled"><small>Website</small> <br> (I didn't manage to deploy a symfony project yet)</button>
+                      <a href="https://github.com/ChavesJimmy/BE17_CR6_bigEventsJimmy.git">See Git Repository</a>
+                  </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content bottom" src="images/CR6-4.png">
+                      <img  class="modal-content bottom" src="images/CR6-3.png">
+                  </div>
+              <div id="caption6"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column fullstack">
+          <div class="content">
+              <img src="./images/FP-2.png" style="width:100%" id="myImgFS" >
+              <h4 class="overlay title">E-commerce Website</h4>
+             
+              </div>
+                     <!-- The Modal CR3 -->
+          <div id="myModalFS" class="modalFS">
+              <span class="closeFS">&times;</span>
+              <div class="flexImg">
+                  <img class="modal-content" src="images/FP.png">
+                  <img class="modal-content" src="images/FP-2.png">
+              </div>
+              <p>
+                  <b>Thema : E-commerce (Fitness products) website</b> <br><br>
+                      Technologies : PHP / SCSS / MySQL / AJAX / API <br><br>
+                      Task : In a team of 5 people we had to build a responsive e-commerce website.
+                      We organised ourself in two teams Front and Back End (I was part of the Back-end group). And we used to communicate a lot through a chat to split the tasks and fix the bugs. <br><br>
+                      We created a landing where you could see all the basic pages without being logged in. We added a map in the footer using API, and a search bar using AJAX<br><br>
+                      We had also to create a user/admin interface. <br><br>
+                      User could add/removed products to/from the shopping cart, add a review, answer a review, see products details, modify is own profile infos. <br><br>
+                      Admin could add, erase, update products and users. And also see the comments, sale statistic of every products.
+                      <br> <br>
+                      Time allowed for the project: 8 days 
+              </p>
+              <div class="projectLinks">
+                  <a href="final-project">Visit Website</a>
+                  <a href="https://github.com/ChavesJimmy/ecommerce_website.git">See Git Repository</a>
+             </div>
+              
+              <div class="flexImg">
+                  <img  class="modal-content bottom" src="images/FP-3.png">
+                  <img  class="modal-content bottom" src="images/FP-5.png">
+              </div>
+              <div id="captionFS"></div>
+          </div>
+          <!--modal end-->
+      </div>
+      <div class="column fullstack">
+          <div class="content">
+              <img src="./images/B-1.png" style="width:100%" id="myImgBakery">
+              <h4 class="overlay title">Bakery Website</h4>
+             
+              </div>
+                     <!-- The Modal photo -->
+          <div id="myModalBakery" class="modalBakery">
+              <span class="closeBakery">&times;</span>
+              <div class="flexImg">
+                  <img class="modal-content" src="images/B-1.png">
+                  <img class="modal-content" src="images/B-2.png">
+              </div>
+              <p>
+                  <b>Thema : Bakery website</b> <br><br>
+                      Technologies : PHP / SCSS / AJAX / MySQL / API <br><br>
+                      Task : I started to create a website for a bakery. I took as a source of inspiration the bakery of a friend. <br><br>
+                      I am working on it on my free time, so far i managed to do the whole structure of the website, some styling and i started to implemnt some php code on it. The database is created but need to be filled up. <br><br>
+                      I plan to add an option to make an order online. Add the CRUD to the admin side. I want to make it easy and practical to use. 
+                      And maybe my friend will really use it in the future. 
+                      <br> <br>
+                      Time allowed for the project: free 
+              </p>
+                  <div class="projectLinks"> <a href="bakery-website">VisitWebsite</a>
+                      <a href="https://github.com/ChavesJimmy/bakery-website.git">See GitRepository</a>
+               </div>
+                  
+                  <div class="flexImg">
+                      <img  class="modal-content bottom" src="images/B-3.png">
+                      <img  class="modal-content bottom" src="images/B-4.png">
+                  </div>
+              <div id="captionBakery"></div>
+          </div>
+          <!--modal end-->
+      </div>
+    <!-- END GRID -->
+    </div>
+  </section>
+  </div>
+  <!--portfolio end-->
+  <!--contact start-->
+  <div id="contact">
+    <section>
+    <h2 class="Mytitle2">
+      <strong>Contact</strong> Me
+    </h2>
+    </section>
+  </div>
+  <!--contact end-->
+
+    <!--SCRIPTS-->
+    <!--Bootstrap Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
+"></script>
+    <!--libraries scripts-->
+    <script src="./scripts/libraries/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <!-- Load library from the CDN -->
+    <!--typed.js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed(".myHeroText",{
+      strings : ["Jimmy CHAVES","Developpeur Web Full Stack"],
+      typeSpeed : 150,
+      backSpeed : 150,
+      loop:true
+    })
+    </script>
+    <!--portfolio scripts-->
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/portfolio.js"></script>
+</body>
+</html>
