@@ -6,18 +6,24 @@
   --last:#FFFFFF;
 }
 
+@media screen and (max-width: 425px) {
+  section {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 425px) {
+  section {
+    padding: 20px 60px;
+  }
+}
 body {
   background-color: var(--last);
   font-family: "Roboto";
   color: var(--third);
   font-weight: 300;
   font-size: 15px;
-  margin: 0;
+  margin: auto;
   padding: 0;
-}
-
-section {
-  padding: 20px 60px;
 }
 
 .bg-darkgrey {
@@ -42,6 +48,22 @@ h2.Mytitle2 strong {
   text-shadow: none;
 }
 
+@media screen and (max-width: 425px) {
+  .navbar-brand img {
+    width: 150px;
+  }
+  #languages {
+    top: 107px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .navbar-brand img {
+    width: 200px;
+  }
+  #languages {
+    top: 132px;
+  }
+}
 .navbar {
   position: sticky;
   top: 0;
@@ -55,7 +77,7 @@ h2.Mytitle2 strong {
 .navbar .nav-link, .navbar a {
   color: var(--third);
   font-weight: 900;
-  font-size: 16px;
+  font-size: 20px;
 }
 .navbar .navbar-brand {
   font-size: 40px;
@@ -73,10 +95,10 @@ h2.Mytitle2 strong {
 
 #languages {
   text-align: end;
-  position: fixed;
-  top: 87px;
+  position: absolute;
   right: 2px;
   padding: 0 5px;
+  max-width: 1440px;
   background-color: var(--last);
 }
 #languages a {
@@ -87,10 +109,35 @@ h2.Mytitle2 strong {
 #languages a:hover {
   color: var(--fourth);
 }
-#languages a.active {
+#languages a.on {
   color: var(--fourth);
 }
 
+#hero-anchor,
+#about-anchor,
+#skills-anchor,
+#portfolio-anchor,
+#contact-anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+}
+
+@media screen and (max-width: 425px) {
+  #hero h1 {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+  .aboutLinks a {
+    padding: 2px 5px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .aboutLinks a {
+    padding: 5px 10px;
+  }
+}
 #hero {
   background-color: transparent;
   display: flex;
@@ -102,7 +149,34 @@ h2.Mytitle2 strong {
 #about {
   color: var(--fourth);
 }
+#about .aboutLinks {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+}
+#about .aboutLinks a {
+  color: var(--last);
+  border: solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 1s;
+}
+#about .aboutLinks a:hover {
+  color: var(--third);
+  background-color: var(--last);
+  box-shadow: 0 0 10px 5px;
+}
 
+@media screen and (max-width: 425px) {
+  #portfolio .row {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 425px) {
+  #portfolio .row {
+    padding: 15px;
+  }
+}
 #portfolio {
   margin: auto;
   /* Center website */
@@ -124,7 +198,6 @@ h2.Mytitle2 strong {
   display: flex;
   flex-wrap: wrap;
 }
-#portfolio .row,
 #portfolio .row > .column {
   padding: 15px;
 }
@@ -192,12 +265,13 @@ h2.Mytitle2 strong {
 }
 
 /* The Modal (background) */
-.modal, .modal2, .modal3, .modal4, .modal5, .modal6, .modalBakery, .modalFS, .modalphoto {
+.modal, .modal2, .modal3, .modal4, .modal5, .modal6, .modalBakery, .modalFS, .modalphoto, .modalCNS {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 150; /* Sit on top */
+  padding: 100px 10px 100px 10px; /* Location of the box */
   left: 0;
+  margin: auto;
   border: solid;
   top: 87px;
   color: var(--fourth);
@@ -206,46 +280,44 @@ h2.Mytitle2 strong {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(11, 22, 44, 0.95); /* Black w/ opacity */
 }
-.modal .flexImg, .modal2 .flexImg, .modal3 .flexImg, .modal4 .flexImg, .modal5 .flexImg, .modal6 .flexImg, .modalBakery .flexImg, .modalFS .flexImg, .modalphoto .flexImg {
+.modal .flexImg, .modal2 .flexImg, .modal3 .flexImg, .modal4 .flexImg, .modal5 .flexImg, .modal6 .flexImg, .modalBakery .flexImg, .modalFS .flexImg, .modalphoto .flexImg, .modalCNS .flexImg {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-around;
 }
-.modal .flexImg img, .modal2 .flexImg img, .modal3 .flexImg img, .modal4 .flexImg img, .modal5 .flexImg img, .modal6 .flexImg img, .modalBakery .flexImg img, .modalFS .flexImg img, .modalphoto .flexImg img {
-  width: 250px;
+.modal .flexImg img, .modal2 .flexImg img, .modal3 .flexImg img, .modal4 .flexImg img, .modal5 .flexImg img, .modal6 .flexImg img, .modalBakery .flexImg img, .modalFS .flexImg img, .modalphoto .flexImg img, .modalCNS .flexImg img {
+  width: 350px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: 1s;
+  margin-bottom: 35px;
 }
-.modal .flexImg .bottom, .modal2 .flexImg .bottom, .modal3 .flexImg .bottom, .modal4 .flexImg .bottom, .modal5 .flexImg .bottom, .modal6 .flexImg .bottom, .modalBakery .flexImg .bottom, .modalFS .flexImg .bottom, .modalphoto .flexImg .bottom {
-  margin-bottom: 15rem;
-}
-.modal p, .modal2 p, .modal3 p, .modal4 p, .modal5 p, .modal6 p, .modalBakery p, .modalFS p, .modalphoto p {
+.modal p, .modal2 p, .modal3 p, .modal4 p, .modal5 p, .modal6 p, .modalBakery p, .modalFS p, .modalphoto p, .modalCNS p {
   border: solid;
   margin: 1rem;
   padding: 1rem 2rem;
   font-weight: bold;
 }
-.modal .projectLinks, .modal2 .projectLinks, .modal3 .projectLinks, .modal4 .projectLinks, .modal5 .projectLinks, .modal6 .projectLinks, .modalBakery .projectLinks, .modalFS .projectLinks, .modalphoto .projectLinks {
+.modal .projectLinks, .modal2 .projectLinks, .modal3 .projectLinks, .modal4 .projectLinks, .modal5 .projectLinks, .modal6 .projectLinks, .modalBakery .projectLinks, .modalFS .projectLinks, .modalphoto .projectLinks, .modalCNS .projectLinks {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 3rem;
   margin-top: 0;
 }
-.modal .projectLinks a, .modal2 .projectLinks a, .modal3 .projectLinks a, .modal4 .projectLinks a, .modal5 .projectLinks a, .modal6 .projectLinks a, .modalBakery .projectLinks a, .modalFS .projectLinks a, .modalphoto .projectLinks a {
+.modal .projectLinks a, .modal2 .projectLinks a, .modal3 .projectLinks a, .modal4 .projectLinks a, .modal5 .projectLinks a, .modal6 .projectLinks a, .modalBakery .projectLinks a, .modalFS .projectLinks a, .modalphoto .projectLinks a, .modalCNS .projectLinks a {
   border: solid 2px;
   color: var(--fourth);
   text-decoration: none;
   padding: 0.5rem;
   transition: 1s;
 }
-.modal .projectLinks a:hover, .modal2 .projectLinks a:hover, .modal3 .projectLinks a:hover, .modal4 .projectLinks a:hover, .modal5 .projectLinks a:hover, .modal6 .projectLinks a:hover, .modalBakery .projectLinks a:hover, .modalFS .projectLinks a:hover, .modalphoto .projectLinks a:hover {
+.modal .projectLinks a:hover, .modal2 .projectLinks a:hover, .modal3 .projectLinks a:hover, .modal4 .projectLinks a:hover, .modal5 .projectLinks a:hover, .modal6 .projectLinks a:hover, .modalBakery .projectLinks a:hover, .modalFS .projectLinks a:hover, .modalphoto .projectLinks a:hover, .modalCNS .projectLinks a:hover {
   background-color: var(--fourth);
   color: var(--secondary);
   font-weight: bold;
 }
-.modal .projectLinks button, .modal2 .projectLinks button, .modal3 .projectLinks button, .modal4 .projectLinks button, .modal5 .projectLinks button, .modal6 .projectLinks button, .modalBakery .projectLinks button, .modalFS .projectLinks button, .modalphoto .projectLinks button {
+.modal .projectLinks button, .modal2 .projectLinks button, .modal3 .projectLinks button, .modal4 .projectLinks button, .modal5 .projectLinks button, .modal6 .projectLinks button, .modalBakery .projectLinks button, .modalFS .projectLinks button, .modalphoto .projectLinks button, .modalCNS .projectLinks button {
   border: solid 3px gray;
   color: whitesmoke;
   text-decoration: line-through;
@@ -279,18 +351,19 @@ h2.Mytitle2 strong {
   }
 }
 /* The Close Button */
-.close, .close2, .close3, .close4, .close5, .close6, .closephoto, .closeFS, .closeBakery {
+.close, .close2, .close3, .close4, .close5, .close6, .closephoto, .closeFS, .closeBakery, .closeCNS {
   position: fixed;
-  top: 87px;
+  top: 137px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  z-index: 100;
 }
 
-.close:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .closephoto:hover, .closeFS:hover, .closeBakery:hover,
-.close:focus, .close2:focus, .close3:focus, .close4:focus, .close5:focus, .close6:focus, .closephoto:focus, .closeFS:focus, .closeBakery:focus {
+.close:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .closephoto:hover, .closeFS:hover, .closeBakery:hover, .closeCNS:hover,
+.close:focus, .close2:focus, .close3:focus, .close4:focus, .close5:focus, .close6:focus, .closephoto:focus, .closeFS:focus, .closeBakery:focus, .closeBakery:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -302,13 +375,31 @@ h2.Mytitle2 strong {
     width: 100%;
   }
 }
+@media screen and (max-width: 425px) {
+  .skillBg {
+    width: 95%;
+  }
+  .skillPrct {
+    font-size: 13px;
+    padding: 2px 0 5px 20px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .skillBg {
+    width: 100%;
+    margin: auto;
+  }
+  .skillPrct {
+    padding: 1px 0 5px 50px;
+  }
+}
 #skills .skillContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
 }
 #skills .skillBg {
   background-color: var(--secondary);
-  width: 100%;
   padding: 0;
   margin-top: 1rem;
   border-radius: 10px;
@@ -320,10 +411,54 @@ h2.Mytitle2 strong {
   color: var(--secondary);
   position: relative;
   text-align: start;
-  padding: 1px 0 5px 50px;
   height: 23px;
   top: 2px;
   left: 2px;
   border-radius: 10px 0 0 10px;
   box-shadow: 1px 0 5px 0 var(--fourth);
+}
+
+@media screen and (max-width: 425px) {
+  .Mycontact {
+    font-size: 18px;
+  }
+  .Mycontact i, .Mycontact p {
+    font-size: 18px;
+  }
+  .Mycontact a {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .Mycontact {
+    font-size: 20px;
+  }
+  .Mycontact i, .Mycontact p {
+    font-size: 20px;
+  }
+  .Mycontact a {
+    font-size: 20px;
+  }
+}
+.ContactBox {
+  display: flex;
+  align-content: start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--secondary) !important;
+  gap: 0.5rem;
+}
+
+.Mycontact {
+  text-align: start;
+  color: var(--fourth);
+}
+.Mycontact i, .Mycontact p {
+  color: var(--fourth);
+}
+.Mycontact a {
+  color: var(--third) !important;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

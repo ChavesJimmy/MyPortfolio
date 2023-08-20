@@ -1,3 +1,25 @@
+@media  screen and (max-width:425px) {
+    .navbar-brand{
+        img{
+            width: 150px;
+        }
+    }
+    #languages{
+        top:107px
+    }
+}
+@media  screen and (min-width:425px) {
+    .navbar-brand{
+        img{
+            width: 200px;
+        }
+    }
+    #languages{
+        top:132px
+    }
+}
+    
+
 .navbar{
     position: sticky;
     top:0;
@@ -12,14 +34,14 @@
 .nav-link,a{
     color: var(--third);
     font-weight: 900;
-    font-size: 16px;
+    font-size: 20px;
 
 }
 .navbar-brand{
     font-size: 40px;
     font-weight: 300;
     color: var(--fourth);
-    
+
 }
 .navbar-toggler{
     background-color: var(--fourth);
@@ -33,10 +55,10 @@
 }
 #languages{
     text-align: end;
-    position: fixed;
-    top: 87px;
+    position: absolute;
     right: 2px;
     padding: 0 5px;
+    max-width: 1440px;
     background-color: var(--last);
     a{
         text-decoration: none;
@@ -46,7 +68,17 @@
     a:hover{
         color: var(--fourth);
     }
-    a.active{
+    a.on{
         color: var(--fourth);
     }
+}
+//link anchor adjust
+#hero-anchor,
+#about-anchor,
+#skills-anchor,
+#portfolio-anchor,
+#contact-anchor {
+    display: block;
+    position: relative;
+    top: -100px;
 }

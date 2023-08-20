@@ -160,3 +160,19 @@ spanBakery.onclick = function() {
 }
 //____________________________________________________________________
 
+// Get the modal CNS
+var modalCNS = document.getElementById("myModalCNS");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgCNS = document.getElementById("myImgCNS");
+var captionText = document.getElementById("captionCNS");
+imgCNS.onclick = function(){
+  modalCNS.style.display = "block";
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var spanCNS = document.getElementsByClassName("closeCNS")[0];
+// When the user clicks on <span> (x), close the modal
+spanCNS.onclick = function() { 
+  modalCNS.style.display = "none";
+}

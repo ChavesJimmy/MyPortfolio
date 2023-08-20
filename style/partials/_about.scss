@@ -1,3 +1,27 @@
+@media  screen and (max-width:425px) {
+  #hero{
+    h1{
+      font-size: 20px;
+      padding: 0 20px;
+    }
+  }
+  .aboutLinks{
+    a{
+      padding: 2px 5px;
+      font-size: 15px;
+
+    }
+  }
+}
+@media  screen and (min-width:425px) {
+  .aboutLinks{
+    a{
+      padding: 5px 10px;
+
+    }
+  }
+}
+
 #hero{
   background-color: transparent;
   display: flex;
@@ -7,4 +31,21 @@
 }
 #about{
     color: var(--fourth);
+    .aboutLinks{
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 2rem;
+      a{
+        color: var(--last);
+        border: solid 1px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 1s;
+    }
+    a:hover{
+      color: var(--third);
+      background-color: var(--last);
+      box-shadow:  0 0 10px 5px;
+    }
+  }
 }

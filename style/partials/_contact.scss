@@ -1,0 +1,44 @@
+@media  screen and (max-width:425px) {
+    .Mycontact{
+        font-size: 18px;
+        i,p{
+            font-size: 18px;
+        }
+        a{
+            font-size: 18px;
+        }
+    }
+  }
+  @media  screen and (min-width:425px) {
+    .Mycontact{
+        font-size: 20px;
+        i,p{
+            font-size: 20px;
+        }
+        a{
+            font-size: 20px;    
+        }
+    }
+  }
+.ContactBox{
+    display: flex;
+    align-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: var(--secondary) !important;
+    gap: 0.5rem;
+
+}
+.Mycontact{
+    text-align: start;
+    color: var(--fourth);
+    i,p{
+        color: var(--fourth);
+    }
+    a{
+        color: var(--third) !important;
+        text-decoration: none;
+    }
+}

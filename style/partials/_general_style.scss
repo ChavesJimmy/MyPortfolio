@@ -5,18 +5,24 @@
     --fourth:#5FC2BA;
     --last:#FFFFFF;
 }
-
+@media  screen and (max-width:425px) {
+    section{
+        padding: 20px ;
+    }
+}
+@media  screen and (min-width:425px) {
+    section{
+        padding: 20px 60px;
+    }
+}
 body{
     background-color: var(--last);
     font-family: 'Roboto';
     color: var(--third);
     font-weight: 300;
     font-size: 15px;
-    margin: 0;
+    margin: auto;
     padding: 0;
-}
-section{
-    padding: 20px 60px;
 }
 .bg-darkgrey{
     background-color: var(--secondary);

@@ -1,3 +1,17 @@
+@media  screen and (max-width:425px) {
+  #portfolio{
+    .row{
+      padding: 0px;
+    }
+  }
+}
+@media  screen and (min-width:425px) {
+  #portfolio{
+    .row{
+      padding: 15px;
+    }
+  }
+}
 #portfolio{
     margin: auto;
     /* Center website */
@@ -14,7 +28,6 @@
   }
   
   /* Add padding BETWEEN each column */
-  .row,
   .row > .column {
     padding: 15px;
   }
@@ -97,18 +110,19 @@
 
 
 /* The Modal (background) */
-.modal, .modal2,.modal3, .modal4,.modal5,.modal6,.modalBakery,.modalFS,.modalphoto {
+.modal, .modal2,.modal3, .modal4,.modal5,.modal6,.modalBakery,.modalFS,.modalphoto,.modalCNS {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 150; /* Sit on top */
+  padding:100px 10px 100px 10px; /* Location of the box */
   left: 0;
+  margin: auto;
   border: solid;
   top: 87px;
   color: var(--fourth);
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow:auto; /* Enable scroll if needed */
+  overflow: auto; /* Enable scroll if needed */
   background-color: transparentize($color: #0B162C, $amount: 0.05); /* Black w/ opacity */
   .flexImg{
     display:flex; 
@@ -116,15 +130,11 @@
     gap: 1rem;
     justify-content: space-around;
     img{
-      width: 250px;
+      width: 350px;
       object-fit: contain;
       transition: 1s;
+      margin-bottom: 35px;
     }
-
-    .bottom{
-      margin-bottom: 15rem;
-    }
-
   }  
   p{
       border:solid ;
@@ -189,18 +199,19 @@
 }
 
 /* The Close Button */
-.close,.close2 ,.close3,.close4,.close5,.close6,.closephoto,.closeFS,.closeBakery {
+.close,.close2 ,.close3,.close4,.close5,.close6,.closephoto,.closeFS,.closeBakery,.closeCNS {
   position: fixed;
-  top: 87px;
+  top: 137px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  z-index: 100;
 }
 
-.close:hover,.close2:hover,.close3:hover,.close4:hover,.close5:hover,.close6:hover,.closephoto:hover,.closeFS:hover,.closeBakery:hover,
-.close:focus, .close2:focus,.close3:focus,.close4:focus,.close5:focus,.close6:focus,.closephoto:focus,.closeFS:focus,.closeBakery:focus {
+.close:hover,.close2:hover,.close3:hover,.close4:hover,.close5:hover,.close6:hover,.closephoto:hover,.closeFS:hover,.closeBakery:hover,.closeCNS:hover,
+.close:focus, .close2:focus,.close3:focus,.close4:focus,.close5:focus,.close6:focus,.closephoto:focus,.closeFS:focus,.closeBakery:focus,.closeBakery:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
